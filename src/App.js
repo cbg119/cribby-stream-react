@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import VideoPlayer from "./VideoPlayer";
 import UrlForm from "./UrlForm";
+import StreamDetails from "./StreamDetails";
 import React from "react";
 
 import "./App.css";
@@ -28,6 +29,9 @@ class App extends React.Component {
                 <div id="stream-details-row" className="row">
                     <div id = "url-div" className = "input-field col s6">
                         <UrlForm callback={this.urlCallback}/>
+                    </div>
+                    <div className="right-align col s6">
+                        <StreamDetails />
                     </div>
                 </div>
                 <div id="metadata-row" className="row hide-on-small-and-down">

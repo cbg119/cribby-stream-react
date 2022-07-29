@@ -23,11 +23,17 @@ class VideoPlayer extends React.Component {
 
         this.player = IVSPackage.create();
 
+        this.player.addEventListener(PlayerState.READY, _ => {
+            document.getElementById("session-id").innerHTML = this.player.getSessionId()
+        })
+
         this.player.load("https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8")
         this.player.setMuted(true);
         this.player.setAutoplay(true);
 
         this.player.attachHTMLVideoElement(document.getElementById("video-player"));
+
+
     }
 
     render() {
@@ -39,6 +45,7 @@ class VideoPlayer extends React.Component {
     componentDidUpdate() {
         this.player.load(this.props.playbackUrl);
     }
+
 }
 
 export default VideoPlayer;
