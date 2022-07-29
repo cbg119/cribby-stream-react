@@ -5,7 +5,10 @@ import "./VideoPlayer.css";
 class VideoPlayer extends React.Component {
     constructor(props) {
         super(props);
+        this.player = "";
     }
+
+
 
     componentDidMount() {
         const IVSPackage = window.IVSPlayer;
@@ -18,19 +21,23 @@ class VideoPlayer extends React.Component {
         const PlayerState = IVSPackage.PlayerState;
         const PlayerEventType = IVSPackage.PlayerEventType;
 
-        const player = IVSPackage.create();
+        this.player = IVSPackage.create();
 
-        player.load(this.props.playbackUrl);
-        player.setMuted(true);
-        player.setAutoplay(true);
+        this.player.load("https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8")
+        this.player.setMuted(true);
+        this.player.setAutoplay(true);
 
-        player.attachHTMLVideoElement(document.getElementById("video-player"));
+        this.player.attachHTMLVideoElement(document.getElementById("video-player"));
     }
 
     render() {
         return (
-            <video id="video-player" class="center-align responsive-video" controls playsInline></video>
+            <video id="video-player" className="center-align responsive-video" controls playsInline></video>
         )
+    }
+
+    componentDidUpdate() {
+        this.player.load(this.props.playbackUrl);
     }
 }
 
