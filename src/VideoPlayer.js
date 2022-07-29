@@ -8,8 +8,6 @@ class VideoPlayer extends React.Component {
         this.player = "";
     }
 
-
-
     componentDidMount() {
         const IVSPackage = window.IVSPlayer;
 
@@ -36,6 +34,10 @@ class VideoPlayer extends React.Component {
 
         this.player.addEventListener(PlayerEventType.ERROR, _ => console.log("There was an error with the player!"));
         this.player.addEventListener(PlayerEventType.QUALITY_CHANGED, _ => console.log("Quality Change: " + (this.player.getQuality()).bitrate));
+
+        this.player.addEventListener(PlayerEventType.TEXT_METADATA_CUE, (text_metadata_cue) => {
+            this.props.logCallback(text_metadata_cue.text);
+        });
 
         this.player.load("https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8")
         this.player.setMuted(true);
