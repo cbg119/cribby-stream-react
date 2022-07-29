@@ -29,7 +29,7 @@ class UrlForm extends React.Component {
                     <i className="material-icons right">live_tv</i>
                 </button>
             </form>
-        )
+        );
     }
 }
 

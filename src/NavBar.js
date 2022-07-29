@@ -1,5 +1,5 @@
 import NavLink from "./NavLink";
-import "./NavBar.css"
+import "./NavBar.css";
 
 let NavBar = () => {
     return (
@@ -13,7 +13,7 @@ let NavBar = () => {
                 </ul>
             </div>
         </nav>
-    )
+    );
 }
 
 export default NavBar;
