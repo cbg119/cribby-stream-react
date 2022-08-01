@@ -23,8 +23,7 @@ class VideoPlayer extends React.Component {
 
         this.player.addEventListener(PlayerState.READY, _ => console.log("Player is Ready!"));
         this.player.addEventListener(PlayerState.READY, _ => {
-            //this is bad and I'm sorry
-            document.getElementById("session-id").innerHTML = this.player.getSessionId();
+            this.props.idCallback(this.player.getSessionId());
         })
 
         this.player.addEventListener(PlayerState.IDLE, _ => console.log("Player is Idle!"));

@@ -8,7 +8,6 @@ class TimedMetadata extends React.Component {
     }
 
     addLog(log) {
-        console.log("Adding log: " + log)
         this.setState({logs: [...this.state.logs, <p>{log}</p>]});
     }
 
