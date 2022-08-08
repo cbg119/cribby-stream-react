@@ -23,6 +23,7 @@ class VideoPlayer extends React.Component {
 
         this.player.addEventListener(PlayerState.READY, _ => console.log("Player is Ready!"));
         this.player.addEventListener(PlayerState.READY, _ => {
+            console.log(this.player.getBufferDuration())
             this.props.idCallback(this.player.getSessionId());
         })
 

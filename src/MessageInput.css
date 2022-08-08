@@ -1,0 +1,5 @@
+#message-form {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0;
+}

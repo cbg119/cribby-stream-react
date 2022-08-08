@@ -1,0 +1,14 @@
+#message-window {
+    width: 100%;
+    overflow-y: scroll;
+    border-style: solid;
+    height:100%;
+    margin-bottom: 0.4em;
+}
+
+#chat-window {
+    height: 100%;
+    flex-direction:column;
+    display: flex;
+    margin-top: 0.4em;
+}

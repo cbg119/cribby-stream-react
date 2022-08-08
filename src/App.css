@@ -6,3 +6,8 @@ video::-webkit-media-controls-current-time-display {
 #url-div {
     margin-top: 0;
 }
+
+#video-row {
+    display:flex;
+    width: 100%
+}
