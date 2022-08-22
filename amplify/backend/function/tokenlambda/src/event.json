@@ -1,0 +1,5 @@
+{
+  "arn": "arn:aws:ivschat:us-east-1:026188476034:room/Swbcpi3e1PN0",
+  "userId": "cribby",
+  "capabilities": ["SEND_MESSAGE"]
+}

@@ -5,7 +5,6 @@ import StreamDetails from "./StreamDetails";
 import TimedMetadata from "./TimedMetadata";
 import React from "react";
 import ChatWindow from "./ChatWindow";
-import SignIn from "./SignIn"
 
 import "@aws-amplify/ui-react/styles.css";
 

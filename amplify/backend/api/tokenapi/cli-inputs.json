@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "paths": {
+    "/api/token": {
+      "name": "/api/token",
+      "lambdaFunction": "tokenlambda",
+      "permissions": {
+        "setting": "private",
+        "auth": [
+          "create",
+          "read"
+        ]
+      }
+    }
+  }
+}
