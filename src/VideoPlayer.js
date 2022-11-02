@@ -28,7 +28,7 @@ class VideoPlayer extends React.Component {
         })
 
         this.player.addEventListener(PlayerState.IDLE, _ => {
-            this.player.play()
+            //this.player.play()
             console.log("Player is Idle!")});
         this.player.addEventListener(PlayerState.PLAYING, _ => console.log("Player is Playing!"));
         this.player.addEventListener(PlayerState.ENDED, _ => console.log("Player has Ended! Did stream/video stop/end?"));
