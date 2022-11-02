@@ -40,7 +40,7 @@ class VideoPlayer extends React.Component {
         });
 
         this.player.load("https://fcc3ddae59ed.us-west-2.playback.live-video.net/api/video/v1/us-west-2.893648527354.channel.DmumNckWFTqz.m3u8")
-        this.player.setMuted(true);
+        this.player.setMuted(false);
         this.player.setAutoplay(true);
 
         this.player.attachHTMLVideoElement(document.getElementById("video-player"));
