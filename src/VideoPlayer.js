@@ -61,7 +61,7 @@ class VideoPlayer extends React.Component {
 
     render() {
         return (
-            <video id="video-player" className="center-align responsive-video" playsInline muted controls></video>
+            <video id="video-player" className="center-align responsive-video" crossorigin="anonymous" playsInline muted controls></video>
         )
     }
 
